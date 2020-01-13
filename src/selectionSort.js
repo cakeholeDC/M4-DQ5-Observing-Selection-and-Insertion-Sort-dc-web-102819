@@ -1,4 +1,10 @@
 function selectionSort(arr) {
-  // your code here!
-  // arr is an array of unsorted integers (i.e. [3, 5, 1])
+	let input = Object.values(arr)
+  let newArray = []
+  let length = arr.length
+  for(let i=0; i < length; i++) {
+  	let min = input.indexOf(Math.min(...input))
+  	newArray.push(...input.splice(min, 1))
+  }
+  return newArray
 }
